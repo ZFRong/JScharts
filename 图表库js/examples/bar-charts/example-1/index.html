@@ -1,0 +1,50 @@
+<html>
+<head>
+
+<title>JSChart</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="../../../sources/jscharts_mb.js"></script>
+
+</head>
+<body>
+
+<div id="graph">Loading graph...</div>
+
+<script type="text/javascript">
+	var myData = new Array(['谁', 21], ['水', 28], ['人', 12], ['哈', 17]);
+	var colors = ['#AF0202', '#EC7A00', '#FCD200', '#81C714'];
+	var myChart = new JSChart('graph', 'bar');
+	myChart.patchMbString();
+	myChart.setDataArray(myData);
+	myChart.colorizeBars(colors);
+	myChart.setTitle('测试标题');
+	myChart.setTitleColor('#8E8E8E');
+	myChart.setAxisNameX('哈哈哈');
+	myChart.setAxisNameY('%');
+	myChart.setAxisNameFontSize(16);
+	myChart.setAxisNameColor('#c600ff');
+	myChart.setAxisColor('#C4C4C4'); // 设置坐标线颜色
+	myChart.setAxisValuesColor('#7E7E7E');
+	myChart.setBarValuesColor('#7E7E7E');
+	myChart.setAxisPaddingTop(60);
+	myChart.setAxisPaddingRight(140);
+	myChart.setAxisPaddingLeft(150);
+	myChart.setAxisPaddingBottom(40);
+	myChart.setTextPaddingLeft(105);
+	myChart.setTitleFontSize(21);
+	myChart.setBarBorderWidth(1);
+	myChart.setBarBorderColor('#C4C4C4');
+	myChart.setBarSpacingRatio(50);
+	myChart.setGrid(false);
+	myChart.setSize(616, 321);
+    myChart.setFontFamily("微软雅黑"); // 设置显示字体为微软雅黑
+	myChart.setTitleColor('#00ff00');//设置标题文字的颜色
+	myChart.setAxisValuesColor('#00aeff');//设置x|y轴的数字颜色
+	myChart.setBarValuesColor('#ff0000');//设置bar数据的颜色
+	myChart.setBarValuesFontSize(21); //设置bar数据字体大小
+    myChart.setAxisValuesFontSize(14); // 设置柱状图和线条图的标尺字体大小为9px 
+    myChart.setPieUnitsFontSize(10); // 设置饼图的项目标识字体大小为10px
+	myChart.draw();
+</script>
+</body>
+</html>
